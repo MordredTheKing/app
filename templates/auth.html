@@ -1,0 +1,116 @@
+<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<script src="static/js/jquery-3.3.1.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/functions.js"></script>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+
+body {
+    background: #e0a800;
+    margin: 5px;
+    padding: 0px;
+</style>
+
+<body>
+<div class="container-fluid">
+     <div class="row" >
+         <div class="col-10" style="padding: 0px">
+             <div class="card card-body bg-primary" style="height: 300px;color: #fcf8e3" align = center>
+                 <div style="color : #dae0e5;" >
+                     <p class="font-italic">
+                         Страница кота
+
+                     </p>
+
+                 </div>
+             </div>
+
+         </div>
+          <div class="col-2" style="padding: 0px">
+             <div class="card card-body bg-primary" style="height: 300px;color: #fd7e14" align = center>
+                 <div style="color : #fcf8e3" >
+                     <p class="font-italic">
+                         Login
+
+                     </p>
+
+                 </div>
+             </div>
+
+         </div>
+     </div>
+</div>
+
+</body>
+
+</body>
+<body>
+<div class="container-fluid">
+     <div class="row">
+         <div class="col-10" style="padding: 0px">
+             <div class="card card-body bg-danger" style="height: 1000px;color: #e0a800;font-size: 50px"align="center">
+                  Registration form
+                  <form action="registration" method="post" >
+                     <div class="card-img-top" style="font-size: 30px" >
+                         <div style="padding: 10px">
+                            <input id="input1" type="text" placeholder="Enter Login" name="login"  required >
+                        </div>
+
+                        <div style="padding: 10px">
+                            <input type="text" placeholder="Enter email" name="email"  required >
+                        </div>
+
+                         <div style="padding: 10px">
+                            <input type="password" placeholder="Enter Password" name="password" required>
+                         </div>
+                         <div style="padding: 10px">
+                            <input type="password" placeholder="Repeat your Password" name="password2"  required >
+                                    {% if error_message %}
+                                        <p class="bg-danger p-d ml-b">{{ error_message }}</p>
+                                    {% endif %}
+                         </div>
+                            <h1>
+
+                            </h1>
+
+                         <div class="d-grid gap-2 d-md-block" >
+                              <button id="id1" class="btn btn-primary" type="submit" style="width: 100px; height: 60px " >Register</button>
+
+                            </div>
+                         </div>
+                  </form>
+
+
+             </div>
+         </div>
+
+         <div class="col-2" style="padding: 0px">
+             <div class="card card-body bg-light" style="height: 1000px;color: #e4606d" >
+                 <div>
+                     <img src="static/Images/cat1.jpg">
+                 </div>
+                 <a href="second_page" class="text-decoration-none">
+                     Вася
+                 </a>
+
+             </div>
+         </div>
+     </div>
+</div>
+
+
+
+</body>
+
+
+</html>

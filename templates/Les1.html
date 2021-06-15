@@ -1,0 +1,150 @@
+<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<script src="static/js/jquery-3.3.1.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+{#<script src="static/js/zad1.js"></script>#}
+{#<script src="static/js/zad2.js"></script>#}
+{#<script src="static/js/functions.js"></script>#}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+
+body {
+    background: #e0a800;
+    margin: 5px;
+    padding: 0px;
+}
+</style>
+
+<body>
+<div class="container-fluid">
+     <div class="row" >
+         <div class="col-10" style="padding: 0px">
+             <div class="card card-body bg-light" style="height: 300px;color: #fcf8e3" align = center>
+                 <div style="color : #dae0e5;" >
+                     <p class="font-italic">
+                         Страница кота
+
+                     </p>
+
+                 </div>
+             </div>
+
+         </div>
+          <div class="col-2" style="padding: 0px">
+             <div class="card card-body bg-light" style="height: 300px;color: #fd7e14; padding: 0px" align = center >
+                 <div style="color : #fcf8e3" >
+                     <p class="font-italic">
+
+                        {% if not request.user.is_authenticated %}
+
+                        <form action="auth" method="post" >
+                          <div class="imgcontainer">
+                            <img src="static/Images/avatar2.png" alt="Avatar" class="avatar" width="50px" align="center" >
+                          </div>
+                          <div class="container" >
+                            <label for="uname" style="color: #9fcdff "><b>Authentication </b></label>
+                            <input id="input2" type="text" placeholder="Enter Username" name="username"  required >
+                              <h1>
+
+                              </h1>
+
+                            <input type="password" placeholder="Enter Password" name="password" required>
+                              <h1>
+
+
+                              </h1>
+                            <div class="d-grid gap-2 d-md-block" >
+                              <button id="id2" class="btn btn-primary" type="submit" style="width: 70px; height: 40px " >Log in</button>
+
+                            </div>
+                            <label style="color: #9fcdff">
+                              <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                              <div style="padding: 0px;width: 0px; height: 0px">
+
+                              </div>
+                               <a href="registration_form" class="text-decoration-none" style="padding: 0px; color: #005cbf ">
+                                   <div class="d-grid gap-2 d-md-block" >
+                             <button id = 'registration'type="button" class="btn btn-outline-info">Registration</button>
+
+                                    </div>
+                             </a>
+                          </div>
+
+{#                          <div class="container" style="background-color:#f1f1f1">#}
+{#                            <button type="button" class="cancelbtn">Cancel</button>#}
+{#                            <span class="psw">Forgot <a href="#">password?</a></span>#}
+{#                          </div>#}
+                        </form>
+                            {% else  %}
+                         <div class="bg-dark">
+
+                             <h1>Привет {{ request.user.username }}!</h1></div>
+                             <img src="static/Images/pavel.jpg" alt="Avatar" class="avatar" width="50px" align="center" >
+                            <a href="logout" class="text-decoration-none">
+                            <button type="button" class="btn btn-outline-danger" style="width: 100px; height: 50px ">
+
+                     Logout
+
+
+                            </button>
+                            </a>
+                       {% endif %}
+                     </p>
+
+                 </div>
+             </div>
+
+         </div>
+     </div>
+</div>
+
+</body>
+
+</body>
+<body>
+<div class="container-fluid">
+     <div class="row">
+         <div class="col-10" style="padding: 0px">
+             <div class="card card-body bg-secondary" style="height: 1000px;color: #e4606d">
+                  Колонка 1
+{#                 <a href="second_page" class="text-decoration-none">#}
+                 <button  type="button" id="iduseless" class="btn btn-outline-light" style="width: 150px; height: 75px ">
+                     Не нажимать!!!!
+                 </button>
+                     <div class="alert alert-danger" role="alert" id="tabl" style="display: none">
+                        хей
+                     </div>
+{#                     </a>#}
+             </div>
+         </div>
+
+         <div class="col-2" style="padding: 0px">
+             <div class="card card-body bg-secondary" style="height: 1000px;color: #e4606d" >
+                 <div>
+                     <img src="static/Images/cat1.jpg">
+                 </div>
+                 <a href="second_page" class="text-decoration-none">
+                     Вася
+                 </a>
+
+             </div>
+         </div>
+     </div>
+</div>
+
+
+
+</body>
+
+
+</html>
