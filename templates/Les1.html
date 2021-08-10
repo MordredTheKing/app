@@ -25,13 +25,14 @@ body {
 </style>
 
 <body>
+{% load i18n %}
 <div class="container-fluid">
      <div class="row" >
          <div class="col-10" style="padding: 0px">
              <div class="card card-body bg-light" style="height: 300px;color: #fcf8e3" align = center>
                  <div style="color : #dae0e5;" >
                      <p class="font-italic">
-                         Страница кота
+                         {% trans кот %}
 
                      </p>
 
@@ -51,7 +52,7 @@ body {
                             <img src="static/Images/avatar2.png" alt="Avatar" class="avatar" width="50px" align="center" >
                           </div>
                           <div class="container" >
-                            <label for="uname" style="color: #9fcdff "><b>Authentication </b></label>
+                            <label for="uname" style="color: #9fcdff "><b>{% trans "Authentication" %} </b></label>
                             <input id="input2" type="text" placeholder="Enter Username" name="username"  required >
                               <h1>
 
@@ -131,7 +132,10 @@ body {
          <div class="col-2" style="padding: 0px">
              <div class="card card-body bg-secondary" style="height: 1000px;color: #e4606d" >
                  <div>
-                     <img src="static/Images/cat1.jpg">
+
+                    <img src="{{cat.photo.url}}">
+
+{#                     <img src="static/Images/cat1.jpg">#}
                  </div>
                  <a href="second_page" class="text-decoration-none">
                      Вася

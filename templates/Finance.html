@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="/papa/static/js/bootstrap.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src=/papa/static/js/Finance.js"></script>
+           <link rel="stylesheet" href="/static/css/styles2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/papa/static/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select class="select" name="language">
+    <option disabled>Выбрать</option>
+    <option value="HTML">HTML</option>
+    <option value="JavaScript">JavaScript</option>
+    <option value="PHP">PHP</option>
+</select>
+
+{#<section>#}
+{#    <div class="wrapper center">#}
+{#        <h3 class="grey-text">No project</h3>#}
+{#        <a href="" class="btn">#}
+{#            <i class="icons"> add</i>#}
+{#            <span class="bold">Add Project</span>#}
+{#        </a>#}
+{##}
+{#    </div>#}
+{#</section>#}
+
+<section class="section section-stats">
+    <div class="row">
+        <div class="col 14">
+        <div class="card-panel">
+            <h6> Расходы</h6>
+            <h1> {{ Project.budget }}</h1>
+        </div>
+        </div>
+                <div class="col 14">
+        <div class="card-panel">
+            <h6> Доходы</h6>
+            <h1> 0</h1>
+        </div>
+        </div>
+                <div class="col 14">
+        <div class="card-panel">
+            <h6> Баланс</h6>
+            <h1> -4444</h1>
+        </div>
+        </div>
+        </div>
+</section>
+<section class="section section-exp">
+    <div class="row">
+        <button class="btn waves-effect right">
+            <i class="matirial-icons white-text left">add_circle</i>
+            Add  </button>
+    </div>
+<ul class="z-depth-1">
+
+{#    {% for expense in expense_list %}#}
+            <li>
+        <div class="card-panel z-depth-0 expense">
+            <div class="row">
+                <div class="col 16">
+                    <span class="title">{{ expense.title }}</span>
+                </div>
+                <div class="col 13">
+                    <span class="title">{{ expense.amount }}</span>
+                </div>
+                <div class="col 1">
+                    <span class="title">{{ expense.category.name }}</span>
+                </div>
+                <a href="">
+                    <i class="material-icons red-text right"> close</i>
+                </a>
+
+            </div>
+        </div>
+    </li>
+
+{#    {% endfor %}#}
+
+
+</ul>
+</section>
+
+<script>
+$('.select').each(function() {
+    const _this = $(this),
+        selectOption = _this.find('option'),
+        selectOptionLength = selectOption.length,
+        selectedOption = selectOption.filter(':selected'),
+        duration = 450; // длительность анимации
+
+    _this.hide();
+    _this.wrap('<div class="select"></div>');
+    $('<div>', {
+        class: 'new-select',
+        text: _this.children('option:disabled').text()
+    }).insertAfter(_this);
+
+    const selectHead = _this.next('.new-select');
+    $('<div>', {
+        class: 'new-select__list'
+    }).insertAfter(selectHead);
+
+    const selectList = selectHead.next('.new-select__list');
+    for (let i = 1; i < selectOptionLength; i++) {
+        $('<div>', {
+            class: 'new-select__item',
+            html: $('<span>', {
+                text: selectOption.eq(i).text()
+            })
+        })
+        .attr('data-value', selectOption.eq(i).val())
+        .appendTo(selectList);
+    }
+
+    const selectItem = selectList.find('.new-select__item');
+    selectList.slideUp(0);
+    selectHead.on('click', function() {
+        if ( !$(this).hasClass('on') ) {
+            $(this).addClass('on');
+            selectList.slideDown(duration);
+
+            selectItem.on('click', function() {
+                let chooseItem = $(this).data('value');
+
+                $('select').val(chooseItem).attr('selected', 'selected');
+                selectHead.text( $(this).find('span').text() );
+
+                selectList.slideUp(duration);
+                selectHead.removeClass('on');
+            });
+
+        } else {
+            $(this).removeClass('on');
+            selectList.slideUp(duration);
+        }
+    });
+});
+</script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
