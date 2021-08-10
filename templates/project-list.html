@@ -17,9 +17,9 @@
               <a class="section-project" style="cursor: pointer" onclick="deleteExpense(this)"  data-id="{{ project.id }}">
               <i class="material-icons red-text right" style="padding-top: 10px; padding-right: 5px">close</i>
           </a>
-      <div class="card-panel">
+      <div class="card-panel" style="color: #005cbf">
         <h5>{{ project.name }}</h5>
-        <a href="{% url 'detail' project.slug %}" class="btn">Visit</a>
+        <a href="{% url 'detail' project.slug %}" class="btn" style="background-color: #6f42c1 ">Visit</a>
 
       </div>
     </div>
