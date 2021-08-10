@@ -1,0 +1,394 @@
+.header {
+
+    display: flex;
+
+    justify-content: center;
+    background: #004085;
+}
+.part {
+  font-family: Raleway;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 27px;
+  color: #dfdfdf;
+  text-decoration: none;
+  padding: 4px 0;
+
+}
+
+.part:not(:first-child) {
+  margin-left: 22px;
+}
+
+.part:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.flexwrapper {
+  display: flex;
+  max-width: 1140px;
+  width: 100%;
+  padding: 0 10px;
+}
+.navigation {
+  margin: auto 0 auto auto;
+}
+.logo {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 70px;
+    color: #FFFFFF;
+}
+
+.form-heading_accent {
+  color: #cb2dc2;
+}
+
+.text1 {
+ /*font-family: Raleway;*/
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #dfdfdf;
+}
+.button_main {
+    width: 166px;
+    height: 42px;
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 28px;
+  color: #cb2dc2;
+
+
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #FFFFFF;
+  color: #cb2dc2;
+        margin-top: 12%;
+
+}
+.element {
+    margin-right: 32px;
+    margin-top: 67px;
+    width: 350px;
+    display: block;
+
+
+}
+.Login{
+    margin-right: 5%;
+    margin-left: 10%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.section2 {
+    position: absolute;
+    width: 100%;
+    height: 1200px;
+    /*background: #b1dfbb;*/
+    background: url(../images/Finance.jpg) no-repeat;;
+    background-size: 100%;
+}
+
+
+.header_features{
+
+
+    color: #FFFFFF;
+    margin-top: 75px;
+    text-align: center;
+    align-items: center;
+    height: 38px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 42px;
+
+
+}
+
+/* Style the tab */
+.tab {
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+
+    margin-top: 50px;
+
+
+    width: 235px;
+    height: 84px;
+    font-family: "Open Sans";
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    background-color: transparent;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #004085;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #004085;
+}
+.tab button:not(:first-child) {
+    margin-left: 90px;
+}
+
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    width: 100%;
+    height: 325px;
+    text-align: center;
+    margin-top: 50px;
+      font-family: Raleway;
+  font-weight: 400;
+  font-size: 56px;
+  color: #FFFFFF;
+}
+.image1{
+    position: absolute;
+    width: 100%;
+    height: 200px;
+}
+
+.select {
+    display: block;
+    max-width: 215px;
+    width: 100%;
+    position: relative;
+}
+
+.new-select {
+    position: relative;
+    border: 1px solid #ced4da;
+    padding: 10px 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.new-select__list {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    border: 1px solid #ced4da;
+    cursor: pointer;
+    width: 100%;
+    z-index: 2;
+    background: #fff;
+    user-select: none;
+}
+
+.new-select__list.on {
+    display: block;
+}
+
+.new-select__item span {
+    display: block;
+    padding: 10px 15px;
+}
+
+.new-select__item span:hover {
+    color: #12b223;
+}
+
+.new-select:after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 9px;
+    top: 9px;
+    background: url(../images/Finance.jpg) no-repeat right center / cover;
+    opacity: 0.6;
+
+    -webkit-transition: all .27s ease-in-out;
+        -o-transition: all .27s ease-in-out;
+            transition: all .27s ease-in-out;
+
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+
+.new-select.on:after {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+         -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+
+
+.section-stats{
+    margin: 8px;
+}
+.card-panel{
+    margin: 8px;
+}
+.section-stats h1 {
+    margin: 15px 0px;
+    font-size: 4vw;
+
+}
+@media (max-width: 992px ) {
+    .section-stats h1 {
+    font-size: calc(16px + 6vw);
+
+}
+}
+
+.section3 {
+    position: absolute;
+    width: 100%;
+    height: 1200px;
+    /*background: #b1dfbb;*/
+    background: url(../images/Fin3v1.png) no-repeat;;
+    background-size: 100%;
+}
+
+.button_log {
+    position: relative;
+    width: 220px;
+    height: 90px;
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    color: #cb2dc2;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #FFFFFF;
+    color: #cb2dc2;
+    margin-top: 5%;
+
+}
+
+.text2 {
+text-align: center;
+ font-family: Raleway;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  color: #FFFFFF;
+    margin-top: 10%;
+    padding: 40px;
+}
+
+
+.form-heading_accent {
+  color: #6610f2;
+}
+
+.form {
+
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    width: 100%;
+    /*margin: auto 20px auto auto;*/
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+
+}
+
+.form-heading {
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: #333;
+    background-color: #FFFFFF;
+    padding: 16px 0;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.form-heading_accent {
+  color: #cb2dc2;
+}
+
+.form-inputs {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0 56px;
+}
+
+.form-inputs-item {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #bdbdbd;
+  width: 67%;
+  border: none;
+  padding-bottom: 19px;
+  outline: none;
+  border-bottom: 1px solid #dfdfdf;
+    margin-top: 28px;
+}
+
+.form-inputs-item:first-child {
+  margin-top: 0px;
+}
+
+.form-inputs-item:focus {
+  border-bottom-color: #333;
+}
+
+.form-button {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #fff;
+  background-color: #cb2dc2;
+  padding: 18px 0;
+  border: none;
+  outline: none;
+  border-radius: 0 0 5px 5px;
+  cursor: pointer;
+
+  transition: all 0.3s linear;
+}
+
+.form-button:hover,
+.form-button:focus {
+  font-size: 18px;
+  background-color: #EC7979;
+}

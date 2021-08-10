@@ -18,13 +18,6 @@ from django.urls import path,include
 
 urlpatterns = [
     path('',include('papa.urls')),
-    path('second_page',include('papa.urls')),
-    path('auth',include('papa.urls')),
-    path('error', include('papa.urls')),
-    path('logout', include('papa.urls')),
-    path('registration_form', include('papa.urls')),
-    path('registration', include('papa.urls')),
-    path('ajax',include('papa.urls')),
-    path('admin/',include('papa.urls')),
-    path('test',include('papa.urls'))
+
+
 ]

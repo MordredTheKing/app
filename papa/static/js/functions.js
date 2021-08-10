@@ -33,31 +33,86 @@
 // });
 
 
+//
+// $(document).ready(function () {
+//
+//     $('#iduseless').click(function (e) {
+//
+//         $('#tabl').html('dgtgt<strobt');
+//         $('#tabl').show()
+//     })
+// });
+//
+// $(document).ready(function (){
+//     var login = $("#input1").val();
+//     $('#input1').blur(function (){
+//
+//         $.post(
+//             'ajax',
+//             {
+//                 'a':' '
+//             },
+//             function (response) {
+//                 alert(response.message)
+//             }
+//         );
+//         })
+// });
 
-$(document).ready(function () {
+// var $page = $('html, body');
+// $('a[href*="#"]').click(function() {
+//     $page.animate({
+//         scrollTop: $($.attr(this, 'href')).offset().top
+//     }, 400);
+//     return false;
+// });
 
-    $('#iduseless').click(function (e) {
+    const anchors = document.querySelectorAll('a[href*="#"]')
 
-        $('#tabl').html('dgtgt<strobt');
-        $('#tabl').show()
-    })
-});
+    for (let anchor of anchors) {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault()
 
-$(document).ready(function (){
-    var login = $("#input1").val();
-    $('#input1').blur(function (){
+            const blockID = anchor.getAttribute('href').substr(1)
 
-        $.post(
-            'ajax',
-            {
-                'a':' '
-            },
-            function (response) {
-                alert(response.message)
-            }
-        );
+            document.getElementById(blockID).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            })
         })
+    }
+var $page = $('html, body');
+$('a[href*="#"]').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 400);
+    return false;
 });
+
+$(document).ready(function(){
+   $("#menu").on("click","a", function (event) {
+   event.preventDefault();
+   var id  = $(this).attr('href'),
+         top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
+  });
+	});
+
+
+$('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+});
+
+$('a[href*=#]').click(function(event){
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+    event.preventDefault();
+});
+
 
 
 
